@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joxy's Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading">
+        <div class="typing">Loading...</div>
+    </div>
+    <div id="content">
+        <div class="terminal-window" id="terminalWindow">
+            <div class="terminal-header" id="terminalHeader">
+                <div class="terminal-buttons">
+                    <span class="button close" id="closeButton"></span>
+                    <span class="button minimize" id="minimizeButton"></span>
+                    <span class="button maximize" id="maximizeButton"></span>
+                </div>
+                <div class="terminal-title">root@joxy:~</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div id="terminalOutput">
+                    <p><span class="prompt">root@joxy:~$</span> Hello, I'm Joxy. I'm a programmer, editor, and Linux user.</p>
+                    <p><span class="prompt">root@joxy:~$</span> I love working on the following technologies:</p>
+                    <ul>
+                        <li>Artificial Intelligence</li>
+                        <li>Bitcoin</li>
+                        <li>Blockchain</li>
+                        <li>Coding</li>
+                        <li>Cryptocurrency</li>
+                        <li>Economics</li>
+                        <li>Ethereum</li>
+                        <li>Future</li>
+                        <li>Investing</li>
+                        <li>Javascript</li>
+                        <li>Software Development</li>
+                        <li>Startups</li>
+                        <li>Tech</li>
+                    </ul>
+                    <p><span class="prompt">root@joxy:~$</span> echo AntonioVBN is my telegram/discord brother</p>
+                    <p>AntonioVBN is my telegram/discord brother</p>
+                </div>
+                <div id="terminalInput">
+                    <span class="prompt">root@joxy:~$</span> <input type="text" id="commandInput" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <div id="minimizeMessage" class="hidden">Joxy is working on this page, please wait...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

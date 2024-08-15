@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  color: #33ff33;
+  background: black url('hackernoon-t2fKRcKF3fw-unsplash.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  z-index: 10;
+}
+
+#content {
+  display: none;
+}
+
+.terminal-window {
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background: #2e2e2e;
+  color: white;
+  font-size: 14px;
+  cursor: move;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.close {
+  background: #ff5f56;
+}
+
+.minimize {
+  background: #ffbd2e;
+}
+
+.maximize {
+  background: #27c93f;
+}
+
+.terminal-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.terminal-body {
+  padding: 20px;
+  background: #1e1e1e;
+  color: #33ff33;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+#terminalInput {
+  display: flex;
+  align-items: center;
+}
+
+#commandInput {
+  background: transparent;
+  border: none;
+  color: #33ff33;
+  flex-grow: 1;
+  outline: none;
+  font-family: monospace;
+}
+
+.prompt {
+  color: #33ff33;
+}
+
+.typing {
+  border-right: .1em solid #33ff33;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: caret 1s steps(1) infinite, typing 2s steps(40, end) forwards;
+}
+
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+ul li::before {
+  content: "root@joxy:~$ ";
+  color: #33ff33;
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#minimizeMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #33ff33;
+  background: black;
+  padding: 10px;
+  border: 1px solid #33ff33;
+  border-radius: 5px;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  0%, 100% { left: 50%; transform: translate(-50%, -50%); }
+  50% { left: 55%; transform: translate(-55%, -50%); }
+}
